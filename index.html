@@ -1,292 +1,288 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wheels of Fire - Home</title>
+<!DOCTYPE html> <!-- This tells the browser this is an HTML5 document -->
+<html lang="en"> <!-- Start of HTML document, set to English language -->
+<head> <!-- Head section contains information about the page that doesn't show on screen -->
+  <meta charset="UTF-8"> <!-- Sets character encoding to support all text types -->
+  <title>Wheels of Fire - Home</title> <!-- Title that appears in browser tab -->
   <style>
     /* Unified styles for all pages */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+    body { /* Styles for the entire page body */
+      font-family: Arial, sans-serif; /* Sets the font type */
+      margin: 0; /* Removes default spacing around page edges */
+      padding: 0; /* Removes default inner spacing */
+      background-color: #f4f4f4; /* Light gray background color */
+      color: #333; /* Dark gray text color */
+      line-height: 1.6; /* Spacing between lines of text */
     }
     
-    header {
-      background-color: #0077cc;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
+    header { /* Styles for the top header section */
+      background-color: #0077cc; /* Blue background */
+      color: white; /* White text */
+      padding: 20px; /* Space inside the header */
+      text-align: center; /* Centers the text */
+      position: relative; /* Allows for positioning adjustments */
     }
     
-    nav {
-      background-color: #0056b3;
-      padding: 10px 0;
-      text-align: center;
+    nav { /* Styles for the navigation menu */
+      background-color: #0056b3; /* Darker blue background */
+      padding: 10px 0; /* Space above and below nav */
+      text-align: center; /* Centers the navigation */
     }
     
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
+    nav ul { /* Styles for the navigation list */
+      list-style: none; /* Removes bullet points */
+      padding: 0; /* Removes default padding */
+      margin: 0; /* Removes default margin */
+      display: flex; /* Makes items line up horizontally */
+      justify-content: center; /* Centers the nav items */
     }
     
-    nav li {
-      margin: 0 15px;
+    nav li { /* Styles for each navigation item */
+      margin: 0 15px; /* Space between nav items */
     }
     
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 4px;
-      transition: background-color 0.3s;
+    nav a { /* Styles for navigation links */
+      color: white; /* White text */
+      text-decoration: none; /* Removes underline */
+      font-weight: bold; /* Makes text bold */
+      padding: 5px 10px; /* Space inside each link */
+      border-radius: 4px; /* Rounded corners */
+      transition: background-color 0.3s; /* Smooth color change on hover */
     }
     
-    nav a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+    nav a:hover { /* Styles when hovering over nav links */
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
     }
     
-    .container {
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 5px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+    .container { /* Main content container styles */
+      padding: 40px; /* Space inside the container */
+      max-width: 1200px; /* Maximum width of content */
+      margin: auto; /* Centers the container */
+      background-color: white; /* White background */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow around container */
+      border-radius: 5px; /* Rounded corners */
+      margin-top: 20px; /* Space above container */
+      margin-bottom: 20px; /* Space below container */
     }
     
-    h1 {
-      margin-top: 0;
-      text-align: center;
+    h1 { /* Styles for main headings */
+      margin-top: 0; /* Removes space above heading */
+      text-align: center; /* Centers the heading */
     }
     
-    h2 {
-      color: #0077cc;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
+    h2 { /* Styles for section headings */
+      color: #0077cc; /* Blue color */
+      border-bottom: 1px solid #eee; /* Light line under heading */
+      padding-bottom: 10px; /* Space between text and line */
     }
     
-    .hero {
-      position: relative;
-      height: 500px;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      margin-bottom: 30px;
-      border-radius: 5px;
+    .hero { /* Styles for the large banner image section */
+      position: relative; /* Allows for text overlay */
+      height: 500px; /* Sets height of hero section */
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'); /* Dark overlay + background image */
+      background-size: cover; /* Makes image cover entire area */
+      background-position: center; /* Centers the image */
+      display: flex; /* Enables flexible layout */
+      align-items: center; /* Centers content vertically */
+      justify-content: center; /* Centers content horizontally */
+      text-align: center; /* Centers text */
+      color: white; /* White text */
+      margin-bottom: 30px; /* Space below hero section */
+      border-radius: 5px; /* Rounded corners */
     }
     
-    .hero-content {
-      max-width: 800px;
-      padding: 20px;
+    .hero-content { /* Container for text inside hero section */
+      max-width: 800px; /* Maximum width of hero text */
+      padding: 20px; /* Space inside hero content */
     }
     
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    .hero h1 { /* Styles for hero section heading */
+      font-size: 3em; /* Large text size */
+      margin-bottom: 20px; /* Space below heading */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Shadow behind text for readability */
     }
     
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
+    .hero p { /* Styles for hero section paragraph */
+      font-size: 1.2em; /* Slightly larger text */
+      margin-bottom: 30px; /* Space below paragraph */
     }
     
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: #0077cc;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-      transition: background-color 0.3s;
+    .btn { /* Styles for buttons */
+      display: inline-block; /* Makes link behave like button */
+      padding: 12px 25px; /* Space inside button */
+      background-color: #0077cc; /* Blue background */
+      color: white; /* White text */
+      text-decoration: none; /* Removes underline */
+      border-radius: 4px; /* Rounded corners */
+      font-weight: bold; /* Bold text */
+      transition: background-color 0.3s; /* Smooth color change on hover */
     }
     
-    .btn:hover {
-      background-color: #0056b3;
+    .btn:hover { /* Button styles when hovering */
+      background-color: #0056b3; /* Darker blue on hover */
     }
     
-    .featured-cars {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+    .featured-cars { /* Container for car cards grid */
+      display: grid; /* Creates a grid layout */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns that adjust to screen size */
+      gap: 30px; /* Space between car cards */
+      margin-top: 40px; /* Space above the car grid */
     }
     
-    .car-card {
-      background-color: #f9f9f9;
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+    .car-card { /* Styles for individual car cards */
+      background-color: #f9f9f9; /* Light gray background */
+      border-radius: 5px; /* Rounded corners */
+      overflow: hidden; /* Prevents content from spilling out */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow under each card */
+      transition: transform 0.3s; /* Smooth animation when hovering */
     }
     
-    .car-card:hover {
-      transform: translateY(-5px);
+    .car-card:hover { /* Car card styles when hovering */
+      transform: translateY(-5px); /* Moves card up slightly on hover */
     }
     
-    .car-image {
-      height: 200px;
-      background-size: cover;
-      background-position: center;
+    .car-image { /* Styles for car images */
+      height: 200px; /* Sets image height */
+      background-size: cover; /* Makes image cover entire area */
+      background-position: center; /* Centers the image */
     }
     
-    .car-content {
-      padding: 20px;
+    .car-content { /* Container for text inside car cards */
+      padding: 20px; /* Space inside content area */
     }
     
-    .car-content h3 {
-      margin-top: 0;
-      color: #0077cc;
+    .car-content h3 { /* Styles for car names */
+      margin-top: 0; /* Removes space above car name */
+      color: #0077cc; /* Blue color for car names */
     }
     
-    footer {
-      background-color: #eee;
-      padding: 30px 20px;
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.9em;
+    footer { /* Styles for bottom footer section */
+      background-color: #eee; /* Light gray background */
+      padding: 30px 20px; /* Space inside footer */
+      text-align: center; /* Centers footer content */
+      margin-top: 40px; /* Space above footer */
+      font-size: 0.9em; /* Slightly smaller text */
     }
     
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      text-align: left;
+    .footer-content { /* Container for footer sections */
+      max-width: 1200px; /* Maximum width */
+      margin: 0 auto; /* Centers footer content */
+      display: grid; /* Creates grid layout */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+      gap: 30px; /* Space between footer sections */
+      text-align: left; /* Aligns text to left */
     }
     
-    .footer-section h3 {
-      color: #0077cc;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 10px;
+    .footer-section h3 { /* Styles for footer headings */
+      color: #0077cc; /* Blue color */
+      border-bottom: 1px solid #ccc; /* Line under heading */
+      padding-bottom: 10px; /* Space between text and line */
     }
     
-    .copyright {
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px solid #ccc;
-      text-align: center;
+    .copyright { /* Styles for copyright section */
+      margin-top: 30px; /* Space above copyright */
+      padding-top: 20px; /* Space inside copyright area */
+      border-top: 1px solid #ccc; /* Line above copyright */
+      text-align: center; /* Centers copyright text */
     }
     
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-      }
-      
-      nav li {
-        margin: 5px 0;
-      }
-      
-      .hero h1 {
-        font-size: 2em;
-      }
-      
-      .container {
-        padding: 20px;
-      }
-    }
+  
+  
   </style>
 </head>
-<body>
+<body> <!-- Start of visible page content -->
 
-  <header>
-    <h1>Wheels of Fire</h1>
-    <p>Premium Automotive Collection</p>
+  <header> <!-- Top section with site name -->
+    <h1>Wheels of Fire</h1> <!-- Main site name -->
+    <p>Premium Automotive Collection</p> <!-- Site tagline/description -->
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contacts.html">Contact Us</a></li>
+  <nav> <!-- Navigation menu -->
+    <ul> <!-- List of navigation links -->
+      <li><a href="index.html">Home</a></li> <!-- Link to home page -->
+      <li><a href="about.html">About Us</a></li> <!-- Link to about page -->
+      <li><a href="contacts.html">Contact Us</a></li> <!-- Link to contact page -->
     </ul>
   </nav>
 
-  <div class="container">
-    <div class="hero">
-      <div class="hero-content">
-        <h1>Experience Automotive Excellence</h1>
-        <p>Discover our curated collection of iconic vehicles, from timeless classics to modern supercars.</p>
+  <div class="container"> <!-- Main content container -->
+    <div class="hero"> <!-- Large banner section -->
+      <div class="hero-content"> <!-- Text content inside banner -->
+        <h1>Experience Automotive Excellence</h1> <!-- Main banner heading -->
+        <p>Discover our curated collection of iconic vehicles, from timeless classics to modern supercars.</p> <!-- Banner description -->
       </div>
     </div>
 
-    <h2>Featured Vehicles</h2>
+    <!-- Featured Vehicles Section - This shows the main cars on our homepage -->
+    <h2>Featured Vehicles</h2> <!-- Section heading -->
     
+    <!-- Container that holds all the car cards in a grid layout -->
     <div class="featured-cars">
-      <div class="car-card">
-        <div class="car-image" style="background-image: url('Images/redconv.jpg');"></div>
-        <div class="car-content">
-          <h3>Scarlet Roadster</h3>
-          <p>A meticulously restored vintage beauty in brilliant red, capturing the romance of open-top motoring from a bygone era.</p>
+      
+      <!-- First car card - Scarlet Roadster -->
+      <div class="car-card"> <!-- Individual car container -->
+        <!-- Car image - using a local file from Images folder -->
+        <div class="car-image" style="background-image: url('https://cdn12.picryl.com/photo/2016/12/31/oldtimer-mg-old-car-9b138e-1024.jpg');"></div>
+        <!-- Car information text -->
+        <div class="car-content"> <!-- Text section of car card -->
+          <h3>Scarlet Roadster</h3> <!-- Car name/title -->
+          <p>A meticulously restored vintage beauty in brilliant red, capturing the romance of open-top motoring from a bygone era.</p> <!-- Car description -->
         </div>
       </div>
       
-      <div class="car-card">
+      <!-- Second car card - Veloce GT -->
+      <div class="car-card"> <!-- Individual car container -->
+        <!-- Car image - using an online image from Unsplash -->
         <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
-        <div class="car-content">
-          <h3>Veloce GT</h3>
-          <p>Engineered for precision and speed, the Veloce GT is a modern marvel representing the pinnacle of automotive technology.</p>
+        <!-- Car information text -->
+        <div class="car-content"> <!-- Text section of car card -->
+          <h3>Veloce GT</h3> <!-- Car name/title -->
+          <p>Engineered for precision and speed, the Veloce GT is a modern marvel representing the pinnacle of automotive technology.</p> <!-- Car description -->
         </div>
       </div>
       
-      <div class="car-card">
+      <!-- Third car card - Thunderbolt Classic -->
+      <div class="car-card"> <!-- Individual car container -->
+        <!-- Car image - using an online image from Unsplash -->
         <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
-        <div class="car-content">
-          <h3>Thunderbolt Classic</h3>
-          <p>Raw power meets iconic design in the Thunderbolt Classic, an American legend that defined an era of performance vehicles.</p>
+        <!-- Car information text -->
+        <div class="car-content"> <!-- Text section of car card -->
+          <h3>Thunderbolt Classic</h3> <!-- Car name/title -->
+          <p>Raw power meets iconic design in the Thunderbolt Classic, an American legend that defined an era of performance vehicles.</p> <!-- Car description -->
         </div>
       </div>
-    </div>
+      
+    </div> <!-- End of featured-cars container -->
     
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="contacts.html" class="btn">Get in Touch</a>
+    <div style="text-align: center; margin-top: 40px;"> <!-- Container for contact button -->
+      <a href="contacts.html" class="btn">Get in Touch</a> <!-- Button linking to contact page -->
     </div>
-  </div>
+  </div> <!-- End of main container -->
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Visit Us</h3>
-        <p>123 Main Street<br>Dublin, Ireland</p>
-        <p>Open Monday-Friday: 9am-6pm<br>Saturday: 10am-4pm</p>
+  <footer> <!-- Bottom section of page -->
+    <div class="footer-content"> <!-- Container for footer sections -->
+      <div class="footer-section"> <!-- First footer column -->
+        <h3>Visit Us</h3> <!-- Footer section heading -->
+        <p>123 Main Street<br>Dublin, Ireland</p> <!-- Address -->
+        <p>Open Monday-Friday: 9am-6pm<br>Saturday: 10am-4pm</p> <!-- Hours -->
       </div>
       
-      <div class="footer-section">
-        <h3>Contact Info</h3>
-        <p>Email: WheelsOfFire@gmail.com<br>Phone: +353 1 234 5678</p>
+      <div class="footer-section"> <!-- Second footer column -->
+        <h3>Contact Info</h3> <!-- Footer section heading -->
+        <p>Email: WheelsOfFire@gmail.com<br>Phone: +353 1 234 5678</p> <!-- Contact details -->
       </div>
       
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <p><a href="index.html" style="color: #0077cc;">Home</a><br>
-        <a href="about.html" style="color: #0077cc;">About Us</a><br>
-        <a href="contacts.html" style="color: #0077cc;">Contact Us</a></p>
+      <div class="footer-section"> <!-- Third footer column -->
+        <h3>Quick Links</h3> <!-- Footer section heading -->
+        <p><a href="index.html" style="color: #0077cc;">Home</a><br> <!-- Link to home -->
+        <a href="about.html" style="color: #0077cc;">About Us</a><br> <!-- Link to about -->
+        <a href="contacts.html" style="color: #0077cc;">Contact Us</a></p> <!-- Link to contact -->
       </div>
     </div>
     
-    <div class="copyright">
-      <p>&copy; 2025 Wheels of Fire. All rights reserved.</p>
+    <div class="copyright"> <!-- Copyright section -->
+      <p>&copy; 2025 Wheels of Fire. All rights reserved.</p> <!-- Copyright text -->
     </div>
-  </footer>
+  </footer> <!-- End of footer -->
 
-</body>
-</html>
+</body> <!-- End of visible content -->
+</html> <!-- End of HTML document -->
