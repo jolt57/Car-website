@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wheels of Fire - About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    
+    nav {
+      background-color: #0056b3;
+      padding: 10px 0;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav li {
+      margin: 0 15px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover, nav a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .container {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+    
+    h2 {
+      color: #0077cc;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    
+    .about-content > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    
+    .about-image {
+      width: 280px;
+      height: 280px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 5px;
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+    
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    
+    footer {
+      background-color: #eee;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: left;
+    }
+    
+    .footer-section h3 {
+      color: #0077cc;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    
+    .copyright {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+      text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      
+      nav li {
+        margin: 5px 0;
+      }
+      
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Wheels of Fire</h1>
+    <p>Premium Automotive Collection</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="contacts.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>About Us</h1>
+    
+    <div class="about-content">
+      <div>
+        <h2>The Owner</h2>
+        <p>
+          From a young age, he's been fascinated by the beauty and engineering of automobiles. What began as a childhood hobby of collecting miniature cars evolved into a lifelong passion for building a collection of real, iconic vehicles. For him, cars are more than just machines — they are works of art that combine power, design, and innovation. He spends countless hours researching, restoring, and showcasing his collection, seeing each vehicle as a reflection of a different era, philosophy, and piece of automotive history.
+        </p>
+        <div class="about-image" style="background-image: url('Images/carshopman.png');"></div>
+      </div>
+      
+      <div>
+        <h2>Our Collection</h2>
+        <p> 
+          Our collection is a stunning mix of automotive excellence, carefully curated to represent the best of performance, style, and heritage. From a meticulously restored classic red convertible that captures the romance of vintage motoring, to sleek, modern supercars engineered for speed and precision, each car tells its own story. The collection spans decades of design evolution, featuring timeless icons alongside cutting-edge innovations, all maintained in pristine condition. Together, they embody his deep appreciation for craftsmanship and his unwavering love for the world of cars.
+        </p>
+        <div class="about-image" style="background-image: url('https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="contacts.html" class="btn">Get in Touch</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Visit Us</h3>
+        <p>123 Main Street<br>Dublin, Ireland</p>
+        <p>Open Monday-Friday: 9am-6pm<br>Saturday: 10am-4pm</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p>Email: WheelsOfFire@gmail.com<br>Phone: +353 1 234 5678</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="index.html" style="color: #0077cc;">Home</a><br>
+        <a href="about.html" style="color: #0077cc;">About Us</a><br>
+        <a href="contacts.html" style="color: #0077cc;">Contact Us</a></p>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 Wheels of Fire. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
