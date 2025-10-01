@@ -1,251 +1,43 @@
-<!DOCTYPE html> <!-- This tells the browser this is an HTML5 document -->
-<html lang="en"> <!-- Start of HTML document, set to English language -->
-<head> <!-- Head section contains information about the page that doesn't show on screen -->
-  <meta charset="UTF-8"> <!-- Sets character encoding to support all text types -->
-  <title>Wheels of Fire - Home</title> <!-- Title that appears in browser tab -->
-  <style>
-    /* Unified styles for all pages */
-    body { /* Styles for the entire page body */
-      font-family: Arial, sans-serif; /* Sets the font type */
-      margin: 0; /* Removes default spacing around page edges */
-      padding: 0; /* Removes default inner spacing */
-      background-color: #f4f4f4; /* Light gray background color */
-      color: #333; /* Dark gray text color */
-      line-height: 1.6; /* Spacing between lines of text */
-    }
-    
-    header { /* Styles for the top header section */
-      background-color: #0077cc; /* Blue background */
-      color: white; /* White text */
-      padding: 20px; /* Space inside the header */
-      text-align: center; /* Centers the text */
-      position: relative; /* Allows for positioning adjustments */
-    }
-    
-    nav { /* Styles for the navigation menu */
-      background-color: #0056b3; /* Darker blue background */
-      padding: 10px 0; /* Space above and below nav */
-      text-align: center; /* Centers the navigation */
-    }
-    
-    nav ul { /* Styles for the navigation list */
-      list-style: none; /* Removes bullet points */
-      padding: 0; /* Removes default padding */
-      margin: 0; /* Removes default margin */
-      display: flex; /* Makes items line up horizontally */
-      justify-content: center; /* Centers the nav items */
-    }
-    
-    nav li { /* Styles for each navigation item */
-      margin: 0 15px; /* Space between nav items */
-    }
-    
-    nav a { /* Styles for navigation links */
-      color: white; /* White text */
-      text-decoration: none; /* Removes underline */
-      font-weight: bold; /* Makes text bold */
-      padding: 5px 10px; /* Space inside each link */
-      border-radius: 4px; /* Rounded corners */
-      transition: background-color 0.3s; /* Smooth color change on hover */
-    }
-    
-    nav a:hover { /* Styles when hovering over nav links */
-      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-    }
-    
-    .container { /* Main content container styles */
-      padding: 40px; /* Space inside the container */
-      max-width: 1200px; /* Maximum width of content */
-      margin: auto; /* Centers the container */
-      background-color: white; /* White background */
-      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow around container */
-      border-radius: 5px; /* Rounded corners */
-      margin-top: 20px; /* Space above container */
-      margin-bottom: 20px; /* Space below container */
-    }
-    
-    h1 { /* Styles for main headings */
-      margin-top: 0; /* Removes space above heading */
-      text-align: center; /* Centers the heading */
-    }
-    
-    h2 { /* Styles for section headings */
-      color: #0077cc; /* Blue color */
-      border-bottom: 1px solid #eee; /* Light line under heading */
-      padding-bottom: 10px; /* Space between text and line */
-    }
-    
-    .hero { /* Styles for the large banner image section */
-      position: relative; /* Allows for text overlay */
-      height: 500px; /* Sets height of hero section */
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'); /* Dark overlay + background image */
-      background-size: cover; /* Makes image cover entire area */
-      background-position: center; /* Centers the image */
-      display: flex; /* Enables flexible layout */
-      align-items: center; /* Centers content vertically */
-      justify-content: center; /* Centers content horizontally */
-      text-align: center; /* Centers text */
-      color: white; /* White text */
-      margin-bottom: 30px; /* Space below hero section */
-      border-radius: 5px; /* Rounded corners */
-    }
-    
-    .hero-content { /* Container for text inside hero section */
-      max-width: 800px; /* Maximum width of hero text */
-      padding: 20px; /* Space inside hero content */
-    }
-    
-    .hero h1 { /* Styles for hero section heading */
-      font-size: 3em; /* Large text size */
-      margin-bottom: 20px; /* Space below heading */
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Shadow behind text for readability */
-    }
-    
-    .hero p { /* Styles for hero section paragraph */
-      font-size: 1.2em; /* Slightly larger text */
-      margin-bottom: 30px; /* Space below paragraph */
-    }
-    
-    .btn { /* Styles for buttons */
-      display: inline-block; /* Makes link behave like button */
-      padding: 12px 25px; /* Space inside button */
-      background-color: #0077cc; /* Blue background */
-      color: white; /* White text */
-      text-decoration: none; /* Removes underline */
-      border-radius: 4px; /* Rounded corners */
-      font-weight: bold; /* Bold text */
-      transition: background-color 0.3s; /* Smooth color change on hover */
-    }
-    
-    .btn:hover { /* Button styles when hovering */
-      background-color: #0056b3; /* Darker blue on hover */
-    }
-    
-    .featured-cars { /* Container for car cards grid */
-      display: grid; /* Creates a grid layout */
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns that adjust to screen size */
-      gap: 30px; /* Space between car cards */
-      margin-top: 40px; /* Space above the car grid */
-    }
-    
-    .car-card { /* Styles for individual car cards */
-      background-color: #f9f9f9; /* Light gray background */
-      border-radius: 5px; /* Rounded corners */
-      overflow: hidden; /* Prevents content from spilling out */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow under each card */
-      transition: transform 0.3s; /* Smooth animation when hovering */
-    }
-    
-    .car-card:hover { /* Car card styles when hovering */
-      transform: translateY(-5px); /* Moves card up slightly on hover */
-    }
-    
-    .car-image { /* Styles for car images */
-      height: 200px; /* Sets image height */
-      background-size: cover; /* Makes image cover entire area */
-      background-position: center; /* Centers the image */
-    }
-    
-    .car-content { /* Container for text inside car cards */
-      padding: 20px; /* Space inside content area */
-    }
-    
-    .car-content h3 { /* Styles for car names */
-      margin-top: 0; /* Removes space above car name */
-      color: #0077cc; /* Blue color for car names */
-    }
-    
-    footer { /* Styles for bottom footer section */
-      background-color: #eee; /* Light gray background */
-      padding: 30px 20px; /* Space inside footer */
-      text-align: center; /* Centers footer content */
-      margin-top: 40px; /* Space above footer */
-      font-size: 0.9em; /* Slightly smaller text */
-    }
-    
-    .copyright { /* Styles for copyright section */
-      margin-top: 30px; /* Space above copyright */
-      padding-top: 20px; /* Space inside copyright area */
-      border-top: 1px solid #ccc; /* Line above copyright */
-      text-align: center; /* Centers copyright text */
-    }
-    
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wheels of Fire - Home</title>
 </head>
-<body> <!-- Start of visible page content -->
+<body>
 
-  <header> <!-- Top section with site name -->
-    <h1>Wheels of Fire</h1> <!-- Main site name -->
-    <p>Premium Automotive Collection</p> <!-- Site tagline/description -->
+  <header>
+    <h1>Wheels of Fire</h1>
+    <p>Premium Automotive Collection</p>
   </header>
 
-  <nav> <!-- Navigation menu -->
-    <ul> <!-- List of navigation links -->
-      <li><a href="index.html">Home</a></li> <!-- Link to home page -->
-      <li><a href="about.html">About Us</a></li> <!-- Link to about page -->
-      <li><a href="contacts.html">Contact Us</a></li> <!-- Link to contact page -->
+  <nav>
+    <ul>
+      <li><a href="proto.index.html">Home</a></li>
+      <li><a href="proto.about.html">About Us</a></li>
+      <li><a href="proto.contacts.html">Contact Us</a></li>
     </ul>
   </nav>
 
-  <div class="container"> <!-- Main content container -->
-    <div class="hero"> <!-- Large banner section -->
-      <div class="hero-content"> <!-- Text content inside banner -->
-        <h1>Experience Automotive Excellence</h1> <!-- Main banner heading -->
-        <p>Discover our curated collection of iconic vehicles, from timeless classics to modern supercars.</p> <!-- Banner description -->
-      </div>
-    </div>
+  <h1>Experience Automotive Excellence</h1>
+  <p>Discover our curated collection of iconic vehicles, from timeless classics to modern supercars.</p>
 
-    <!-- Featured Vehicles Section - This shows the main cars on our homepage -->
-    <h2>Featured Vehicles</h2> <!-- Section heading -->
-    
-    <!-- Container that holds all the car cards in a grid layout -->
-    <div class="featured-cars">
-      
-      <!-- First car card - Scarlet Roadster -->
-      <div class="car-card"> <!-- Individual car container -->
-        <!-- Car image - using a local file from Images folder -->
-        <div class="car-image" style="background-image: url('https://cdn12.picryl.com/photo/2016/12/31/oldtimer-mg-old-car-9b138e-1024.jpg');"></div>
-        <!-- Car information text -->
-        <div class="car-content"> <!-- Text section of car card -->
-          <h3>Scarlet Roadster</h3> <!-- Car name/title -->
-          <p>A meticulously restored vintage beauty in brilliant red, capturing the romance of open-top motoring from a bygone era.</p> <!-- Car description -->
-        </div>
-      </div>
-      
-      <!-- Second car card - Veloce GT -->
-      <div class="car-card"> <!-- Individual car container -->
-        <!-- Car image - using an online image from Unsplash -->
-        <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
-        <!-- Car information text -->
-        <div class="car-content"> <!-- Text section of car card -->
-          <h3>Veloce GT</h3> <!-- Car name/title -->
-          <p>Engineered for precision and speed, the Veloce GT is a modern marvel representing the pinnacle of automotive technology.</p> <!-- Car description -->
-        </div>
-      </div>
-      
-      <!-- Third car card - Thunderbolt Classic -->
-      <div class="car-card"> <!-- Individual car container -->
-        <!-- Car image - using an online image from Unsplash -->
-        <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
-        <!-- Car information text -->
-        <div class="car-content"> <!-- Text section of car card -->
-          <h3>Thunderbolt Classic</h3> <!-- Car name/title -->
-          <p>Raw power meets iconic design in the Thunderbolt Classic, an American legend that defined an era of performance vehicles.</p> <!-- Car description -->
-        </div>
-      </div>
-      
-    </div> <!-- End of featured-cars container -->
-    
-    <div style="text-align: center; margin-top: 40px;"> <!-- Container for contact button -->
-      <a href="contacts.html" class="btn">Get in Touch</a> <!-- Button linking to contact page -->
-    </div>
-  </div> <!-- End of main container -->
+  <h2>Featured Vehicles</h2>
+  
+  <h3>Scarlet Roadster</h3>
+  <p>A meticulously restored vintage beauty in brilliant red, capturing the romance of open-top motoring from a bygone era.</p>
+  
+  <h3>Veloce GT</h3>
+  <p>Engineered for precision and speed, the Veloce GT is a modern marvel representing the pinnacle of automotive technology.</p>
+  
+  <h3>Thunderbolt Classic</h3>
+  <p>Raw power meets iconic design in the Thunderbolt Classic, an American legend that defined an era of performance vehicles.</p>
+  
+  <a href="proto.contacts.html">Get in Touch</a>
 
-  <footer> <!-- Bottom section of page -->
-    <div class="copyright"> <!-- Copyright section -->
-      <p>&copy; 2025 Wheels of Fire. All rights reserved.</p> <!-- Copyright text -->
-    </div>
-  </footer> <!-- End of footer -->
+  <footer>
+    <p>&copy; 2025 Wheels of Fire. All rights reserved.</p>
+  </footer>
 
-</body> <!-- End of visible content -->
-</html> <!-- End of HTML document -->
+</body>
+</html>
