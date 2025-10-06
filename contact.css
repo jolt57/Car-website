@@ -4,7 +4,7 @@
 }
 
 .topnav a {
-  float: center;
+    float: right;
   display: block;
   color: #000000;
   text-align: center;
@@ -23,18 +23,21 @@
 h1{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 0; /* keep header compact */
     font-size: 36px;
-    color: #333333;
-    text-shadow: 2px 2px #aaaaaa;
-    letter-spacing: 2px;
-    word-spacing: 4px;
-    border-bottom: 2px solid #333333;
-    padding-bottom: 10px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
+    color: #000000; /* plain black text */
+}
 
+/* unified header layout: title centered, nav on the right */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 16px; /* remove top padding so header is flush with page top */
+}
+.site-header .topnav {
+    margin-left: auto; /* push nav to the right */
 }
 
 
@@ -51,15 +54,7 @@ h2 {
 
 }
 
-header {
-    background-color: #6d6d6d;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-    border-bottom: 2px solid #333333;
-}
+/* header element does not need a separate dark style; header layout handled by .site-header and h1 rules */
 
 body {
     font-family: Arial, Helvetica, sans-serif;

@@ -1,7 +1,4 @@
-h1{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif
-}
+body { margin: 0; padding: 0; }
     img {
       display: block;
       margin: 0 auto;
@@ -38,4 +35,15 @@ h3{
   background-color: #ffffff;
   color: rgb(137, 137, 137);
 }
+
+/* unified header layout shared across pages */
+h1{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; /* keep header compact */
+  font-size: 36px;
+  color: #000000; /* plain black text */
+}
+.site-header { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 0 16px; }
+.site-header .topnav { margin-left: auto; }
 
