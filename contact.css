@@ -1,254 +1,126 @@
-.topnav {
-  overflow: hidden;
-  background-color: #ffffff;
-}
-
-.topnav a {
-    float: right;
-  display: block;
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ffffff;
-  color: rgb(137, 137, 137);
-} 
-
-
-
-
-/* unified header layout shared across pages */
-.site-header { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 8px 16px; }
-.site-header h1 { margin: 0; font-size: 32px; color: #000; }
-.topnav { overflow: hidden; }
-.topnav a { float: right; display: block; color: #000; text-align: center; padding: 10px 14px; text-decoration: none; font-size: 16px; }
-.topnav a:hover { color: #666; }
-
-
-h2 {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 28px;
-    color: #444444;
-    text-shadow: 1px 1px #bbbbbb;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    margin-bottom: 20px;
-
-}
-
-/* header element does not need a separate dark style; header layout handled by .site-header and h1 rules */
-
+/* Body & headings */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* plain white background */
-    color: #222222;
+    background-image: url('https://i.pinimg.com/originals/72/18/a1/7218a1302960c48611e068302450c2a6.gif');
+    background-size: cover;      /* make it cover whole viewport */
+    background-repeat: no-repeat; /* prevent repetition */
+    background-position: center;  /* center the GIF */
+    background-attachment: fixed; /* optional: stays in place when scrolling */
 }
 
-
-
-.contact-section {
+h2 {
     text-align: center;
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 28px;
+    color: #ffffff;
+    text-shadow: 1px 1px #bbbbbb;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-bottom: 20px;
 }
 
-
+/* Contact Details */
 .contact-details {
     font-size: 18px;
     color: #333333;
     line-height: 1.6;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto;
     max-width: 400px;
     padding: 20px;
     border: 2px solid #333333;
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    transform: translateY(0);
 }
 
-
-.map {
-    text-align: center;
-    margin: 20px auto;
+/* Contact Details Hover Effects */
+.contact-details p {
+    margin: 10px 0;
     padding: 10px;
-    background-color: #f9f9f9;
-    border: 2px solid #333333;
-    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.contact-details p:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Map */
+.map {
     display: block;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    transform: translateY(0);
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: fit-content; /* shrink-wrap around image */
 }
 
 .map img {
-    width: 100%;
+    display: block;
+    width: 600px;
+    max-width: 100%;
     height: auto;
-    border: 2px solid #333333;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    transform: translateY(0);
 }
 
-/* Center and style the contact form to match contact-details */
+/* Contact Form */
 .contact-form {
+    display: block;
     margin: 20px auto;
     max-width: 400px;
     padding: 20px;
+    background-color: #f9f9f9;
     border: 2px solid #333333;
     border-radius: 8px;
-    background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 6px;
+    text-align: center;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 16px;
 }
 
 .contact-form input[type="submit"],
 .contact-form input[type="reset"] {
-    padding: 8px 12px;
-    border-radius: 4px;
-    border: 1px solid #666;
-    background: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333333;
+    color: #fff;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover,
+.contact-form input[type="reset"]:hover {
+    background-color: #555555;
 }
 
 
-
-.contact-details p {
-    margin: 8px 0;
-    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
-    cursor: pointer;
-    font-size: 18px;
-    color: #333333;
-    line-height: 1.6;
-    margin: 0 auto;
-    max-width: 400px;
-    padding: 10px;
-
-}
-
-.contact-details p:hover {
-    color: #555555;
-    cursor: pointer;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.contact-details p:active {
-    color: #000000;
-    transform: translateY(0);
-    transition: transform 0.1s ease;
-    background-color: #d0d0d0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    padding: 10px;
-    cursor: pointer;
-    outline: none;
-}
-
-.contact-details p:visited {
-    color: #777777;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    padding: 10px;
-    box-shadow: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    transform: translateY(0);
-}
-
-.contact-details p:focus {
-    outline: 2px solid #000000;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    padding: 10px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-    transition: transform 0.3s ease, background-color 0.3s ease
-}
-
-.contact-details p:before {
-    content: "📧 ";
-    border-radius: 4px;
-    padding: 10px;
-    cursor: pointer;
-    margin-right: 8px;
+.topnav {
+    max-width: 1000px;
+    margin: 50px auto; /* center horizontally and add spacing top/bottom */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.2); /* translucent overlay */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* softens GIF behind */
     text-align: center;
-    font-size: 18px;
-    color: #333333;
-    line-height: 1.6;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 400px;
-    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif
 }
-
-.contact-details p:nth-child(2):before {
-    content: "📞 ";
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    padding: 10px;
-    cursor: pointer;
-    margin-right: 8px;
-    text-align: center;
-    font-size: 18px;
-    color: #333333;
-    line-height: 1.6;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 400px;
-    padding: 10px;
-}
-
-.contact-details p:nth-child(3):before {
-    content: "📍 ";
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    padding: 10px;
-    cursor: pointer;
-    margin-right: 8px;
-    text-align: center;
-    font-size: 18px;
-    color: #333333;
-    line-height: 1.6;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 400px;
-    padding: 10px;
-}
-
-
-
-
-

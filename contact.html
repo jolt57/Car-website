@@ -1,24 +1,29 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Wheels Of Fire</title>
-        <link rel="icon" type="image/x-icon" href="redconv-removebg-preview.png">
-        <link rel="stylesheet" href="contact.css">
-    </head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wheels Of Fire</title>
+    <link rel="icon" type="image/x-icon" href="redconv-removebg-preview.png">
+    <link rel="stylesheet" href="contact.css">
+</head>
 
 <body>
+    <header>
+        <h1>Wheels Of Fire</h1>
+    </header>
+    <br>
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-        <!-- unified header: title centered, nav on the right -->
-        <header class="site-header">
-            <h1>Wheels Of Fire</h1>
-            <nav class="topnav">
-                <a class="active" href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
+
+
+    <br>
     <h2>Contact Us</h2> 
+
+    <!-- Contact Details -->
     <div class="contact-details">
         <h3>Details</h3>
         <p>Email: wheels.of.fire.contact@gmail.com</p>
@@ -26,31 +31,32 @@
         <p>Address: 123, Main Street, Dublin, Ireland</p>
     </div>
 
-    <br>
+    <br><br>
+
+    <!-- Map -->
     <div class="map">
-        <img src="Images/storelocation.png" alt="Location on map">
+        <img src="storelocation.png" alt="Map">
     </div>
 
-    <br>
+    <br><br>
+
+    <!-- Contact Form -->
     <div class="contact-form">
         <h3>Send us a message</h3>
         <form action="mailto:wheels.of.fire.contact@gmail.com" method="post" enctype="text/plain">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
+
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br><br>
+
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
             <input type="submit" value="Send">
             <input type="reset" value="Reset">
         </form>
-
-
-</div>
-
+    </div>
 
 </body>
-
-
 </html>
-
