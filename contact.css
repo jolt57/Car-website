@@ -21,30 +21,16 @@
 
 
 
-h1{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0; /* keep header compact */
-    font-size: 36px;
-    color: #000000; /* plain black text */
-}
-
-/* unified header layout: title centered, nav on the right */
-.site-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 0 16px; /* remove top padding so header is flush with page top */
-}
-.site-header .topnav {
-    margin-left: auto; /* push nav to the right */
-}
+/* unified header layout shared across pages */
+.site-header { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 8px 16px; }
+.site-header h1 { margin: 0; font-size: 32px; color: #000; }
+.topnav { overflow: hidden; }
+.topnav a { float: right; display: block; color: #000; text-align: center; padding: 10px 14px; text-decoration: none; font-size: 16px; }
+.topnav a:hover { color: #666; }
 
 
 h2 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     margin-top: 10px;
     font-size: 28px;
     color: #444444;
@@ -69,7 +55,6 @@ body {
 
 .contact-section {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     margin: 20px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
