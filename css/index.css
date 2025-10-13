@@ -1,0 +1,157 @@
+
+/*Headers and body*/
+h1 {
+    text-align: center;/*horizontally aligns text to the centre*/
+    font-family: Arial, Helvetica, sans-serif;/*font*/
+    margin-top: 10px;/*distane from the top of the border and surrounding content*/
+    font-size: 28px;/*size of the font*/
+    color: #ffffff;/*text colour*/
+    text-shadow: 1px 1px #bbbbbb;/*applys shadow affect to the font*/
+    letter-spacing: 1px;/*spacing between the letters*/
+    word-spacing: 2px;/*spacing between the words*/
+    margin-bottom: 20px;/*the distance from the the bottom of the border and the surrounding content*/
+}
+
+h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 28px;
+    color: #ffffff;
+    text-shadow: 1px 1px #bbbbbb;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;/*the space between the border and the content inside the border*/
+    background-image: url('https://i.pinimg.com/originals/72/18/a1/7218a1302960c48611e068302450c2a6.gif');/*sets the background to a gif using a url*/
+    background-size: cover;        /*make it cover whole page*/
+    background-repeat: no-repeat;  /*prevent repetition*/
+    background-position: center;   /*centres the GIF*/
+    background-attachment: fixed;  /*stays in place when scrolling*/
+}
+
+
+
+
+
+
+/*Car of the week*/
+.car-of-the-week {
+    align-items: flex flex-start;/*flex is a layout model and the start allows me to place the items at the start of the contentt*/
+    display: flex;
+    gap: 20px;/*the gap in between the contents of the layout*/
+}
+
+.car-of-the-week-description {
+    max-width: 500px;/*max with of the box*/
+    min-width: 300px;/*min with of the box*/
+    margin: 30px 70px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /*translucent overlay*/
+    backdrop-filter: blur(10px) ;         /*soft off-white*/
+    border-left: 6px solid darkgrey;    /*colored stripe on left*/
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* soft shadow */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.car-of-the-week-picture{
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px) ;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: fit-content;
+}
+
+.car-of-the-week-picture img:hover,
+.car-of-the-week-description p:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+/*Navigation bar*/
+.topnav {
+    max-width: 1000px;
+    margin: 50px auto; 
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 15px;
+    backdrop-filter: blur(10px); 
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.topnav a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 50px;
+}
+
+
+
+
+
+
+/*Car Gallery CSS*/
+.gallery {
+    align-items: flex flex-start;
+    display: flex;
+    gap: 20px;
+}
+
+.gallery img{
+width: 450px;
+height: 300px;
+padding: 10px;
+margin: 2px;
+margin-right: center;
+}
+
+.gallery p{ 
+    max-width: 500px;
+    min-width: 300px;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px) ;         
+    border-left: 6px solid darkgrey;    
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+.gallery img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery p:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
