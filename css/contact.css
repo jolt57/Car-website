@@ -183,12 +183,14 @@ h2 {
     }
 
     .map {
-        width: 95%;
+        width: 100%;
         max-width: 100%;
         padding: 10px;
         text-align: center;
         margin: 10px auto;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .map img {

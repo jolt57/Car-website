@@ -191,10 +191,13 @@ margin-right: center;
         margin: 10px auto;
         padding: 10px;
         text-align: center;
+        width: 100%;
+        max-width: 100%;
     }
 
     .car-of-the-week-picture img {
         width: 100%;
+        max-width: 100%;
         height: auto;
         display: block;
         margin: 0 auto;
@@ -208,7 +211,9 @@ margin-right: center;
 
     .gallery > div {
         width: 100%;
+        max-width: 100%;
         text-align: center;
+        margin: 0 auto;
     }
 
     .gallery img {
@@ -217,6 +222,7 @@ margin-right: center;
         height: auto;
         margin: 5px auto;
         display: block;
+        padding: 0;
     }
 
     .gallery p {
