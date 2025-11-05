@@ -178,6 +178,7 @@ margin-right: center;
     .car-of-the-week {
         flex-direction: column;
         gap: 10px;
+        align-items: center;
     }
 
     .car-of-the-week-description {
@@ -202,6 +203,7 @@ margin-right: center;
     .gallery {
         flex-direction: column;
         gap: 10px;
+        align-items: center;
     }
 
     .gallery img {
