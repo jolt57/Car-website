@@ -183,7 +183,8 @@ h2 {
     }
 
     .map {
-        width: 100%;
+        width: 95%;
+        max-width: 100%;
         padding: 10px;
         text-align: center;
         margin: 10px auto;
@@ -192,6 +193,7 @@ h2 {
 
     .map img {
         width: 100%;
+        max-width: 100%;
         margin: 0 auto;
         display: block;
     }

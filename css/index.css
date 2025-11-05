@@ -206,15 +206,21 @@ margin-right: center;
         align-items: center;
     }
 
+    .gallery > div {
+        width: 100%;
+        text-align: center;
+    }
+
     .gallery img {
         width: 100%;
+        max-width: 100%;
         height: auto;
         margin: 5px auto;
         display: block;
     }
 
     .gallery p {
-        margin: 10px;
+        margin: 10px auto;
         min-width: auto;
         max-width: 100%;
     }
