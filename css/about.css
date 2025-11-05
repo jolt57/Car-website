@@ -59,7 +59,7 @@ h1 {
 }
 
 .owner-card{
-    align-items: flex flex-start;
+    align-items: flex-start;
     display: flex;
     gap: 20px;
     

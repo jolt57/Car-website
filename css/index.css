@@ -42,7 +42,7 @@ body {
 
 /*Car of the week*/
 .car-of-the-week {
-    align-items: flex flex-start;/*flex is a layout model and the start allows me to place the items at the start of the contentt*/
+    align-items: flex-start;/*flex is a layout model and the start allows me to place the items at the start of the contentt*/
     display: flex;
     gap: 20px;/*the gap in between the contents of the layout*/
 }
@@ -115,7 +115,7 @@ body {
 
 /*Car Gallery CSS*/
 .gallery {
-    align-items: flex flex-start;
+    align-items: flex-start;
     display: flex;
     gap: 20px;
 }
@@ -124,8 +124,7 @@ body {
 width: 450px;
 height: 300px;
 padding: 10px;
-margin: 2px;
-margin-right: center;
+margin: 2px auto;
 }
 
 .gallery p{ 
@@ -142,7 +141,7 @@ margin-right: center;
     color: #ffffff;
     line-height: 1.6;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery img:hover{
