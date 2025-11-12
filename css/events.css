@@ -57,22 +57,13 @@ p {
     text-align: center;
 }
 
-
-
-/*Car of the week*/
-.car-of-the-week {
-    align-items: flex-start;/*flex is a layout model and the start allows me to place the items at the start of the contentt*/
-    display: flex;
-    gap: 20px;/*the gap in between the contents of the layout*/
-}
-
 .supercar-weekend,
 .classic-car-show,
 .vinatge-rally,
 .special-event {
     max-width: 500px;/*max with of the box*/
     min-width: 300px;/*min with of the box*/
-    margin: 30px 70px;
+    margin: 30px auto; /* center the blocks */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.2); /*translucent overlay*/
     backdrop-filter: blur(10px) ;         /*soft off-white*/
@@ -82,9 +73,22 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     line-height: 1.6;
-    text-align: left;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
+}
+
+/* Center the specials card grid */
+.specials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Center the header event image block */
+.event-picture {
+    text-align: center;
 }
 
 
@@ -119,55 +123,19 @@ p {
 }
 
 
-
-
-
-
-/*Car Gallery CSS*/
-.gallery {
-    align-items: flex-start;
-    display: flex;
-    gap: 20px;
-}
-
 .specials-showcase img{
 width: 450px;
 height: 300px;
 padding: 10px;
 margin: 2px auto;
 display: block;
+align-items: center;
 
 
 
 
 }
 
-.gallery p{ 
-    max-width: 500px;
-    min-width: 300px;
-    margin: 30px 0;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px) ;         
-    border-left: 6px solid darkgrey;    
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    line-height: 1.6;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.gallery p:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 
 /* Device Accessibility */
 
