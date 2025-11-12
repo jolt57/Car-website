@@ -139,11 +139,16 @@ p {
     gap: 20px;
 }
 
-.gallery img{
+.specials-showcase img{
 width: 450px;
 height: 300px;
 padding: 10px;
 margin: 2px auto;
+display: block;
+
+
+
+
 }
 
 .gallery p{ 
