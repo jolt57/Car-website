@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Wheels Of Fire</title>
@@ -11,18 +12,18 @@
     <header>
         <h1>Wheels Of Fire</h1>
     </header>
-<!-- navigation bar -->
-  <div class="topnav">
-    <a class="active" href="../index.html">Home</a>
-    <a href="../pages/about.html">About</a>
+    <!-- navigation bar -->
+    <div class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="../pages/about.html">About</a>
         <a href="../pages/contact.html">Contact</a>
         <a href="../pages/events.html">Events</a>
-  </div>
+    </div>
 
 
 
     <br>
-    <h2>Contact Us</h2> 
+    <h2>Contact Us</h2>
 
     <!-- Contact Details -->
     <div class="contact-details">
@@ -44,20 +45,42 @@
     <!-- Contact Form -->
     <div class="contact-form">
         <h3>Send us a message</h3>
-        <form action="mailto:wheels.of.fire.contacts@gmail.com" method="post" enctype="text/plain"><!-- function to mail the inputs to wheels.of.fire...-->
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+        <form id="emailForm" novalidate>
+            <label for="first-name">First Name:</label><br>
+            <input type="text" id="first-name" name="first-name" required>
+            <div class="error-message" id="error-first-name"></div>
+            <br>
+
+            <label for="last-name">Last Name:</label><br>
+            <input type="text" id="last-name" name="last-name" required>
+            <div class="error-message" id="error-last-name"></div>
+            <br>
 
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email" required>
+            <div class="error-message" id="error-email"></div>
+            <br>
+
+            
+            <label for="inquiry-type">Inquiry Type:</label><br>
+            <select id="inquiry-type" name="inquiry-type">
+                <option value="GEN">General</option>
+                <option value="FBK">Feedback</option>
+                <option value="TCH">Technical Support</option>
+            </select>
+            <br>
+
 
             <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="error-message" id="error-message"></div>
+            <br>
 
             <input type="submit" value="Send">
             <input type="reset" value="Reset">
         </form>
     </div>
-
+    <script src="/js/contact.js"></script>
 </body>
+
 </html>

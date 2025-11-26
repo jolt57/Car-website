@@ -84,47 +84,86 @@ h2 {
 
 /* Contact Form */
 .contact-form {
-    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
     margin: 20px auto;
-    max-width: 400px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 2px solid #333333;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.contact-form h3 {
+    color: #fff;
+    margin-bottom: 20px;
     text-align: center;
+}
+
+.contact-form label {
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
-.contact-form textarea {
-    width: 90%;
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
     padding: 10px;
     margin: 8px 0;
-    border: 2px solid #333333;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-form select {
+    cursor: pointer;
+}
+
+.contact-form select option {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: #ff4444;
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
 }
 
 .contact-form input[type="submit"],
 .contact-form input[type="reset"] {
-    padding: 10px 20px;
-    margin: 5px;
+    background-color: #ff4444;
+    color: white;
+    padding: 12px 30px;
     border: none;
     border-radius: 8px;
-    background-color: #333333;
-    color: #fff;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin: 10px 5px 0 0;
+    transition: all 0.3s ease;
 }
 
-.contact-form input[type="submit"]:hover,
+.contact-form input[type="submit"]:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.4);
+}
+
 .contact-form input[type="reset"]:hover {
-    background-color: #555555;
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.4);
 }
-
 
 .topnav {
     max-width: 1000px;
@@ -236,4 +275,39 @@ h2 {
 
 /* Desktop screens (width > 1024px)*/
 @media screen and (min-width: 1025px) {
+}
+
+
+
+
+
+
+#errorMessages {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#errorMessages .error {
+    color: #d32f2f;
+    background-color: #ffebee;
+    border: 1px solid #ef5350;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.error-message::before {
+    content: " ";
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.error-message {
+    color: #ff4444;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
 }
